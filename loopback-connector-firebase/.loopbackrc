@@ -1,0 +1,13 @@
+{
+    "dev": {
+        "firebase": {
+            "url": "https://loopback-test.firebaseio.com/",
+            "token": "e8cYsM4O4DtqIvz9FamGgwkLzVlEXhKoHtoj6m9X"
+        }
+    },
+    "test": {
+        "firebase": {
+            "url": "https://test.firebaseio.com/"
+        }
+    }
+}

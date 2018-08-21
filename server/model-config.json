@@ -1,0 +1,57 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "User": {
+    "dataSource": "db"
+  },
+  "AccessToken": {
+    "dataSource": "db",
+    "public": false,
+    "relations": {
+      "user": {
+        "type": "belongsTo",
+        "model": "user",
+        "foreignKey": "userId"
+      }
+    }
+  },
+  "ACL": {
+    "dataSource": "db",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "db",
+    "public": false,
+    "options": {
+      "strictObjectIDCoercion": true
+    }
+  },
+  "Role": {
+    "dataSource": "db",
+    "public": false
+  },
+  "Stop": {
+    "dataSource": "mongoAtlas",
+    "public": true
+  },
+  "Route": {
+    "dataSource": "mongoAtlas",
+    "public": true
+  },
+  "Time": {
+    "dataSource": "mongoAtlas",
+    "public": true
+  }
+}

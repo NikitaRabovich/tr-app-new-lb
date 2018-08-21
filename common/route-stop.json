@@ -1,0 +1,54 @@
+{
+  "name": "routeStop",
+  "plural": "routeStops",
+  "base": "Stop",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true,
+    "mongodb": {
+      "collection": "stops"
+    }
+  },
+  "properties": {
+    "id": {
+      "type": "number",
+      "id": true,
+      "required": true
+    },
+    "revId": {
+      "type": "number",
+      "required": false
+    },
+    "direction": {
+      "type": "number",
+      "required": true
+    },
+    "type": {
+      "type": [
+        "string"
+      ],
+      "required": true
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "times": {
+      "type": "hasMany",
+      "model": "Time",
+      "foreignKey": "",
+      "options": {
+      }
+    },
+    "routes": {
+      "type": "belongsTo",
+      "model": "Route",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

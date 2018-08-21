@@ -1,0 +1,66 @@
+{
+  "name": "Stop",
+  "plural": "Stops",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true,
+    "mongodb": {
+      "collection": "stops"
+    }
+  },
+  "properties": {
+    "id": {
+      "type": "number",
+      "required": true
+    },
+    "revId": {
+      "type": "number",
+      "required": false
+    },
+    "direction": {
+      "type": "number",
+      "required": true
+    },
+    "type": {
+      "type": [
+        "string"
+      ],
+      "required": true
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "routes": {
+      "type": "hasMany",
+      "model": "Route",
+      "foreignKey": "stopId",
+      "through": "Time",
+      "keyThrough": "routeId",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "times": {
+      "type": "hasMany",
+      "model": "Time",
+      "foreignKey": "stopId"
+    },
+    "time": {
+      "type": "belongsTo",
+      "model": "Time",
+      "foreignKey": "stopId"
+    },
+    "route": {
+      "type": "belongsTo",
+      "model": "Route",
+      "foreignKey": "routeId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

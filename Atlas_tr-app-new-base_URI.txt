@@ -1,0 +1,3 @@
+mongodb+srv://MblKblTA:<1havfk1npassw0rd>@tr-app-new-base-ximjq.gcp.mongodb.net/test?retryWrites=true
+
+mongo "mongodb+srv://tr-app-new-base-ximjq.gcp.mongodb.net/test" --username MblKblTA

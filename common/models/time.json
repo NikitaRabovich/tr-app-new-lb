@@ -1,0 +1,63 @@
+{
+  "name": "Time",
+  "plural": "Times",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true,
+    "mongodb": {
+      "collection": "times"
+    }
+  },
+  "properties": {
+    "id": {
+      "type": "string",
+      "required": true
+    },
+    "routeId": {
+      "type": "number",
+      "required": true
+    },
+    "stopId": {
+      "type": "number",
+      "required": true
+    },
+    "timesH": {
+      "type": [
+        "number"
+      ],
+      "required": false
+    },
+    "timesW": {
+      "type": [
+        "number"
+      ],
+      "required": false
+    }
+  },
+  "validations": [],
+  "relations": {
+    "route": {
+      "type": "belongsTo",
+      "model": "Route",
+      "foreignKey": "routeId"
+    },
+    "stop": {
+      "type": "belongsTo",
+      "model": "Stop",
+      "foreignKey": "stopId"
+    },
+    "routes": {
+      "type": "hasOne",
+      "model": "Route",
+      "foreignKey": "timeId"
+    },
+    "stops": {
+      "type": "hasOne",
+      "model": "Stop",
+      "foreignKey": "timeId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
