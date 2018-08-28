@@ -14,6 +14,14 @@
       "type": "string",
       "required": true
     },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "order": {
+      "type": "number",
+      "required": true
+    },
     "routeId": {
       "type": "number",
       "required": true

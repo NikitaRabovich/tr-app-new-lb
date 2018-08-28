@@ -23,6 +23,7 @@
     "url": "mongodb://MblKblTA:1havfk1npassw0rd@tr-app-new-base-shard-00-00-ximjq.gcp.mongodb.net:27017,tr-app-new-base-shard-00-01-ximjq.gcp.mongodb.net:27017,tr-app-new-base-shard-00-02-ximjq.gcp.mongodb.net:27017/tr-app-new?ssl=true&replicaSet=tr-app-new-base-shard-0&authSource=admin&retryWrites=true",
     "database": "tr-app-new",
     "name": "mongoAtlas",
-    "connector": "mongodb"
+    "connector": "loopback-connector-mongodb-custom",
+    "disableDefaultSort": true
   }
 }
