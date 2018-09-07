@@ -14,8 +14,12 @@
       "type": "number",
       "required": true
     },
-    "location": {
-      "type": "geopoint",
+    "lat": {
+      "type": "number",
+      "required": true
+    },
+    "lng": {
+      "type": "number",
       "required": true
     },
     "revId": {

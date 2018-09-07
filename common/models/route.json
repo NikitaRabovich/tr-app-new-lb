@@ -22,6 +22,22 @@
       "type": "number",
       "required": true
     },
+    "color": {
+      "type": "string",
+      "required": true
+    },
+    "lat": {
+      "type": [
+        "number"
+      ],
+      "required": true
+    },
+    "lng": {
+      "type": [
+        "number"
+      ],
+      "required": true
+    },
     "type": {
       "type": "string",
       "required": true
